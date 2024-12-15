@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Cakes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Profile Icon Style */
+        .profile-icon {
+            font-size: 35px;
+            color: #D06092; 
+            cursor: pointer;
+            margin-left: 20px;
+        }
+       /* Profile Menu */
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; 
+}
+/* Hero Section Image */
+.hero-img img {
+    position: relative;
+    z-index: 1; 
+}
+
+        /* Form Styles */
+        .signup-form {
+            background-color: #f9f3f3;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .signup-form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #D06092;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .signup-form button {
+            width: 100%;
+            background-color: #D06092;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .signup-form button:hover {
+            background-color: #c05586;
+        }
+        .profile-name {
+            font-size: 20px;
+            color: #D06092;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">COOKIE!</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Payment and Delivery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="order-btn">Order a Cake</button>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- Profile Icon -->
+            <div class="profile">
+                <i class="fas fa-user-circle profile-icon" onclick="toggleProfileMenu()"></i>
+                <span class="profile-name" id="profile-name"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Menu -->
+    <div class="profile-menu" id="profile-menu">
+        <form id="signup-form" class="signup-form">
+            <input type="text" id="username" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover delicious cakes for everyone</h1>
+            <p>
+                Explore our irresistible collection of cakes, made to add sweetness to your special moments. 
+                With a variety of flavors and designs, we ensure every cake is crafted to perfection just for you.
+            </p>
+            <p class="discount-text">Place your first order and get a <span>15% discount</span></p>
+            <button class="order-btn">Order a Cake</button>
+        </div>
+        <div class="hero-img">
+            <img src="images/cake.png" alt="Delicious Cake">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>WHAT'S NEW?</h2>
+        <p class="subtext">Why are our desserts so delicious?</p>
+        <div class="feature-items">
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fas fa-apple-alt"></i></div>
+                <p>Fresh products</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fas fa-birthday-cake"></i></div>
+                <p>Beautiful decor</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fas fa-user-tie"></i></div>
+                <p>Customer friendly</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-circle"><i class="fas fa-utensils"></i></div>
+                <p>Melty</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="about-content">
+            <div class="about-img">
+                <img src="https://img.freepik.com/free-photo/smiling-portrait-female-entrepreneur-holding-meringue-plate_23-2148027967.jpg?t=st=1734286562~exp=1734290162~hmac=505f8f67ec694b51c26735aef85e76ba38c50b8e1be1c9348b0a982b41d21429&w=1060" alt="Pastry Chef">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>My dream is for Atmi Cafe & Cake shop to become one of the best in India. Above all, it's important to me to maintain the daily joy that my beloved profession brings.</p>
+                <p>We know exactly how to make your holiday truly special. Each time we bake a custom cake, we use only fresh, high-quality ingredients, because without them, the perfect taste is impossible to achieve.</p>
+                <p class="chef-info">Cookie - Sowmiya Chef at Atmi.</p>
+            </div>
+        </div>
+        <div class="about-imgs">
+            <img src="images/at1.jpg" alt="Cake 1">
+            <img src="https://img.freepik.com/free-photo/coffee-with-milk-glass_1203-1663.jpg?t=st=1734287836~exp=1734291436~hmac=79e7f4f247114a3d78f93859e07437862807507550d3af3823216e77b57e7466&w=1060" alt="Cake 2">
+        </div>
+    </section>
+
+    <script>
+
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block'; 
+        }
+
+        // Handle Sign-up Form Submission
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            document.getElementById('profile-name').innerText = username; 
+            document.getElementById('profile-menu').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
